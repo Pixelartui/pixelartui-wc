@@ -22,9 +22,13 @@ jobs:
 
       - name: Setup
         uses: actions/setup-node@v4
-
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: npm
+      - name: Install dep
+        run: npm install
       - name: Lint files
-        run: npm run  lint
+        run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -35,19 +39,10 @@ jobs:
 
       - name: Setup
         uses: actions/setup-node@v4
-
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: npm
+      - name: Install dep
+        run: npm install
       - name: Run unit tests
         run: npm test
-
-  build-library:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-
-      - name: Setup
-        uses: actions/setup-node@v4
-
-      - name: Build package
-        run: npm run build
