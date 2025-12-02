@@ -8,13 +8,24 @@ import summary from 'rollup-plugin-summary';
 import terser from '@rollup/plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import packageJson from "./package.json" with { type: "json" };
+import dts from "rollup-plugin-dts";
 
-export default {
-  input: 'my-element.js',
-  output: {
-    file: 'my-element.bundled.js',
-    format: 'esm',
-  },
+export default [
+    {
+  input: 'src/index.ts',
+  output: [
+      {
+        file: packageJson.main,
+        format: "cjs",
+        sourcemap: true,
+      },
+      {
+        file: packageJson.module,
+        format: "esm",
+        sourcemap: true,
+      },
+  ],  
   onwarn(warning) {
     if (warning.code !== 'THIS_IS_UNDEFINED') {
       console.error(`(!) ${warning.message}`);
@@ -39,4 +50,12 @@ export default {
     }),
     summary(),
   ],
-};
+},
+{
+    input: "dist/esm/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    plugins: [dts()],
+    external: [/\.css$/],
+  },
+];
+
