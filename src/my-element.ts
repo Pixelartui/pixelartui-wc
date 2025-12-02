@@ -66,3 +66,5 @@ declare global {
     'my-element': MyElement;
   }
 }
+
+//aded comment
