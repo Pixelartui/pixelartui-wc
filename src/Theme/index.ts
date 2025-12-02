@@ -1,0 +1,185 @@
+import {adjust} from '../helper';
+import {DefaultTheme} from './types';
+
+const mainPrimaryColor = '#04A1E1';
+const mainSecondaryColor = adjust(mainPrimaryColor, 40);
+const mainTertiaryColor = adjust(mainPrimaryColor, -30);
+const mainFontColor = '#1C2924';
+const mainFontColorLight = '#ffffff';
+const mainBorderColor = '#1C2924';
+const fontDisabledColor = '#d7d0d0';
+const outlinePrimaryColor = '#ffffff00';
+const disableColor = '#ECDDF7';
+const mainErrorColor = '#ff0000';
+
+export const theme: DefaultTheme = {
+  general: {
+    color: {
+      primary: mainPrimaryColor,
+      secondary: mainSecondaryColor,
+      tertiary: mainTertiaryColor,
+      font: mainFontColor,
+      fontLight: mainFontColorLight,
+      fontDisabled: fontDisabledColor,
+      dark: '#1C2924',
+      light: '#F6F9FC',
+      disabled: disableColor,
+      white: '#ffffff',
+      black: '#000000',
+      error: mainErrorColor,
+    },
+  },
+  button: {
+    color: {
+      main: {
+        normal: {
+          primary: mainPrimaryColor,
+          secondary: mainSecondaryColor,
+          tertiary: mainTertiaryColor,
+          font: {
+            bright: mainFontColorLight,
+            dark: mainFontColor,
+          },
+          border: mainBorderColor,
+        },
+        hover: {
+          // primary: adjust(mainPrimaryColor, 5),
+          primary: mainPrimaryColor,
+
+          secondary: mainSecondaryColor,
+          tertiary: mainTertiaryColor,
+          font: {
+            bright: mainFontColorLight,
+            dark: mainFontColor,
+          },
+          border: mainBorderColor,
+        },
+      },
+      outline: {
+        normal: {
+          primary: outlinePrimaryColor,
+          secondary: mainSecondaryColor,
+          tertiary: mainTertiaryColor,
+          font: {
+            bright: mainFontColorLight,
+            dark: mainFontColor,
+          },
+          border: mainBorderColor,
+        },
+        hover: {
+          primary: '#96969669',
+          secondary: mainSecondaryColor,
+          tertiary: mainTertiaryColor,
+          font: {
+            bright: mainFontColorLight,
+            dark: mainFontColor,
+          },
+          border: mainBorderColor,
+        },
+      },
+    },
+    size: {
+      small: {
+        width: '60px',
+        height: '30px',
+        fontSize: '20px',
+      },
+      medium: {
+        width: '100px',
+        height: '35px',
+        fontSize: '24px',
+      },
+      large: {
+        width: '150px',
+        height: '40px',
+        fontSize: '28px',
+      },
+    },
+  },
+  // textInput: {
+  //     color: {
+  //         main: {
+  //             normal: {
+  //                 primary: mainPrimaryColor,
+  //                 secondary: mainSecondaryColor,
+  //                 tertiary: mainTertiaryColor,
+  //                 font: {
+  //                     bright: mainFontColorLight,
+  //                     dark: mainFontColor,
+  //                 },
+  //                 border: mainBorderColor,
+  //             },
+  //         },
+  //         inline: {},
+  //     },
+  //     size: {
+  //         free: {
+  //             width: "200px",
+  //             height: "45px",
+  //             fontSize: "20px",
+  //         },
+  //     },
+  // },
+  // select: {
+  //     color: {
+  //         main: {
+  //             normal: {
+  //                 primary: mainPrimaryColor,
+  //                 secondary: mainSecondaryColor,
+  //                 tertiary: mainTertiaryColor,
+  //                 font: {
+  //                     bright: mainFontColorLight,
+  //                     dark: mainFontColor,
+  //                 },
+  //                 border: mainBorderColor,
+  //             },
+  //             hover: {
+  //                 primary: mainPrimaryColor,
+  //                 secondary: mainSecondaryColor,
+  //                 tertiary: mainTertiaryColor,
+  //                 font: {
+  //                     bright: mainFontColorLight,
+  //                     dark: mainFontColor,
+  //                 },
+  //                 border: mainBorderColor,
+  //             },
+  //         },
+  //         inline: {},
+  //     },
+  //     size: {
+  //         free: {
+  //             width: "180px",
+  //             height: "50px",
+  //             fontSize: "20px",
+  //         },
+  //     },
+  // },
+  // switch: {
+  //     size: {
+  //         free: {
+  //             width: "55px",
+  //             height: "",
+  //             fontSize: "",
+  //         },
+  //     },
+  //     color: {},
+  // },
+  // textArea: {
+  //     size: {
+  //         free: {
+  //             width: "500px",
+  //             height: "500px",
+  //             fontSize: "",
+  //         },
+  //     },
+  //     color: {},
+  // },
+  // box: {
+  //     size: {},
+  //     color: {},
+  // },
+  // modal: {
+  //     size: {},
+  //     color: {},
+  // },
+};
