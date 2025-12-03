@@ -7,27 +7,51 @@ import {adjust, isStringHexColor} from '../../helper';
 import {theme} from '../../Theme';
 
 export class PixelBox extends LitElement {
+  /**
+   * Custom width of the box.
+   */
   @property({type: String})
   width = '';
 
+  /**
+   * Custom height of the box.
+   */
   @property({type: String})
   height = '';
 
+  /**
+   * The fullwidth setting.
+   */
   @property({type: Boolean})
   fullwidth = false;
 
+  /**
+   * The round shape setting.
+   */
   @property({type: Boolean})
   round = false;
 
+  /**
+   * The error state setting.
+   */
   @property({type: Boolean})
   error = false;
 
+  /**
+   * The disabled state setting.
+   */
   @property({type: Boolean})
   disabled = false;
 
+  /**
+   * The box style setting.
+   */
   @property()
   boxStyle = 'dark';
 
+  /**
+   * Custom color of the box.
+   */
   @property()
   customColor = '';
 
@@ -216,3 +240,9 @@ export class PixelBox extends LitElement {
 }
 
 customElements.define('pixel-box', PixelBox);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'pixel-box': PixelBox;
+  }
+}

@@ -12,3 +12,9 @@ export class PixelButton extends LitElement {
     `;
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'pixel-button': PixelButton;
+  }
+}
