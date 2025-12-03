@@ -1,7 +1,7 @@
 import {html, fixture, expect} from '@open-wc/testing';
 
 import {PixelContainer} from './pixel-container';
-import '../../../dist/Components/Container/pixel-container';
+import '../Container/pixel-container';
 
 describe('Component', () => {
   it('should renders child correctly', async () => {

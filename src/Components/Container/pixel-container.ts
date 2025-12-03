@@ -30,3 +30,9 @@ export class PixelContainer extends LitElement {
 }
 
 customElements.define('pixel-container', PixelContainer);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'pixel-container': PixelContainer;
+  }
+}
