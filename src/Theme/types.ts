@@ -1,4 +1,4 @@
-import {ButtonType} from '../Components/Button/types';
+import {ButtonType} from '../Button/types';
 
 interface FontColor {
   bright: string;

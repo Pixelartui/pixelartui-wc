@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "es2018",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "esnext",
+    "moduleResolution": "node",
     "noEmitOnError": true,
     "lib": ["es2017", "dom"],
     "strict": true,
@@ -15,8 +15,8 @@
     "inlineSources": true,
     "rootDir": "./src",
     "declaration": true,
-    "declarationDir": "dist/type",
     "skipLibCheck": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["dist", "**/*.stories.ts", "**/*.test.ts"]
 }

@@ -1,6 +1,6 @@
 import {LitElement, html} from 'lit';
 import {customElement} from 'lit/decorators.js';
-import '../Container/pixel-container.js';
+import '../Container/index.js';
 
 @customElement('pixel-button')
 export class PixelButton extends LitElement {
@@ -10,11 +10,5 @@ export class PixelButton extends LitElement {
         <button>Click Me!</button>
       </pixel-container>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'pixel-button': PixelButton;
   }
 }

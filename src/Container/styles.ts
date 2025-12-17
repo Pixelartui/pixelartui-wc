@@ -1,5 +1,5 @@
 import {css, unsafeCSS} from 'lit';
-import {theme} from '../../Theme';
+import {theme} from '../Theme';
 
 export const StyledContainer = css`
   .cp-container {
