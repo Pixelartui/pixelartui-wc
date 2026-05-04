@@ -8,7 +8,6 @@ import {ButtonSize, ButtonType, ButtonStyle} from './types';
 import '../Box';
 import {theme} from '../Theme';
 import {
-  adjust,
   isStringHexColor,
   getContrastColor,
   handleCustomColor,
