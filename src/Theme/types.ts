@@ -1,6 +1,7 @@
 import {ButtonType} from '../Button/types';
 import {InputType} from '../TextInput/types';
 import {SwitchType} from '../Switch/types';
+import {TextAreaType} from '../TextArea/types';
 
 interface FontColor {
   bright: string;
@@ -28,7 +29,7 @@ interface ComponentSizes {
   free?: ComponentSizeProp;
 }
 
-type ComponentTypes = ButtonType | SwitchType | InputType;
+type ComponentTypes = ButtonType | SwitchType | InputType | TextAreaType;
 type ComponentStates = 'normal' | 'hover';
 type ComponentStateProps = {
   [key in ComponentStates]?: ComponentColorProp;
@@ -63,4 +64,5 @@ export interface DefaultTheme {
   button: ComponentSpec;
   textInput: ComponentSpec;
   switch: ComponentSpec;
+  textArea: ComponentSpec;
 }
