@@ -96,30 +96,29 @@ export const theme: DefaultTheme = {
       },
     },
   },
-  // textInput: {
-  //     color: {
-  //         main: {
-  //             normal: {
-  //                 primary: mainPrimaryColor,
-  //                 secondary: mainSecondaryColor,
-  //                 tertiary: mainTertiaryColor,
-  //                 font: {
-  //                     bright: mainFontColorLight,
-  //                     dark: mainFontColor,
-  //                 },
-  //                 border: mainBorderColor,
-  //             },
-  //         },
-  //         inline: {},
-  //     },
-  //     size: {
-  //         free: {
-  //             width: "200px",
-  //             height: "45px",
-  //             fontSize: "20px",
-  //         },
-  //     },
-  // },
+  textInput: {
+    color: {
+      main: {
+        normal: {
+          primary: mainPrimaryColor,
+          secondary: mainSecondaryColor,
+          tertiary: mainTertiaryColor,
+          font: {
+            bright: mainFontColorLight,
+            dark: mainFontColor,
+          },
+          border: mainBorderColor,
+        },
+      },
+    },
+    size: {
+      free: {
+        width: '200px',
+        height: '45px',
+        fontSize: '20px',
+      },
+    },
+  },
   // select: {
   //     color: {
   //         main: {
