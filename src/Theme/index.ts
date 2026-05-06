@@ -153,16 +153,16 @@ export const theme: DefaultTheme = {
   //         },
   //     },
   // },
-  // switch: {
-  //     size: {
-  //         free: {
-  //             width: "55px",
-  //             height: "",
-  //             fontSize: "",
-  //         },
-  //     },
-  //     color: {},
-  // },
+  switch: {
+    size: {
+      free: {
+        width: '55px',
+        height: '',
+        fontSize: '',
+      },
+    },
+    color: {},
+  },
   // textArea: {
   //     size: {
   //         free: {
