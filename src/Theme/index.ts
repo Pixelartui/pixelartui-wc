@@ -163,16 +163,16 @@ export const theme: DefaultTheme = {
     },
     color: {},
   },
-  // textArea: {
-  //     size: {
-  //         free: {
-  //             width: "500px",
-  //             height: "500px",
-  //             fontSize: "",
-  //         },
-  //     },
-  //     color: {},
-  // },
+  textArea: {
+    size: {
+      free: {
+        width: '500px',
+        height: '500px',
+        fontSize: '',
+      },
+    },
+    color: {},
+  },
   // box: {
   //     size: {},
   //     color: {},
