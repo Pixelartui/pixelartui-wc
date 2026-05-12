@@ -17,31 +17,7 @@ export const StyledChatPrompt = css`
     gap: 8px;
     width: 100%;
     padding: 8px;
-    border: 3px solid var(--chat-border-color, #1c2924);
     background-color: var(--chat-bg, #ffffff);
-    image-rendering: pixelated;
-    clip-path: polygon(
-      0 6px,
-      3px 6px,
-      3px 3px,
-      6px 3px,
-      6px 0,
-      calc(100% - 6px) 0,
-      calc(100% - 6px) 3px,
-      calc(100% - 3px) 3px,
-      calc(100% - 3px) 6px,
-      100% 6px,
-      100% calc(100% - 6px),
-      calc(100% - 3px) calc(100% - 6px),
-      calc(100% - 3px) calc(100% - 3px),
-      calc(100% - 6px) calc(100% - 3px),
-      calc(100% - 6px) 100%,
-      6px 100%,
-      6px calc(100% - 3px),
-      3px calc(100% - 3px),
-      3px calc(100% - 6px),
-      0 calc(100% - 6px)
-    );
   }
 
   .cp-chat-prompt-textarea {

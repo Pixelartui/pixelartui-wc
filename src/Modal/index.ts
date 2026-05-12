@@ -4,6 +4,7 @@ import {styleMap} from 'lit/directives/style-map.js';
 import {StyledModal} from './styles';
 import {ActionButtons, ModalStyle} from './types';
 
+import '../Box';
 import {theme} from '../Theme';
 import {adjust} from '../helper';
 
@@ -102,43 +103,47 @@ export class PixelModal extends LitElement {
         aria-modal="true"
         aria-label="${this.header || this.name || 'Modal'}"
       >
-        <div
-          class="cp-modal-box"
-          style="width: ${this.width}; height: ${this.height};"
+        <pixel-box
+          boxStyle="${this.modalStyle}"
+          customColor="${this.backgroundColor}"
+          width="${parseInt(this.width)}"
+          height="${parseInt(this.height)}"
         >
-          <button
-            class="cp-modal-close"
-            @click="${this.handleClose}"
-            aria-label="Close modal"
-          >
-            X
-          </button>
-          ${this.header
-            ? html`<div class="cp-modal-header">${this.header}</div>`
-            : nothing}
-          <div class="cp-modal-body">
-            <slot></slot>
+          <div class="cp-modal-box">
+            <button
+              class="cp-modal-close"
+              @click="${this.handleClose}"
+              aria-label="Close modal"
+            >
+              X
+            </button>
+            ${this.header
+              ? html`<div class="cp-modal-header">${this.header}</div>`
+              : nothing}
+            <div class="cp-modal-body">
+              <slot></slot>
+            </div>
+            ${this.actionButtons
+              ? html`
+                  <div class="cp-modal-actions">
+                    <button
+                      class="cp-modal-action-btn"
+                      @click="${this.handleLeftClick}"
+                    >
+                      ${this.actionButtons.left}
+                    </button>
+                    <button
+                      class="cp-modal-action-btn secondary"
+                      @click="${this.handleRightClick}"
+                      ?disabled="${this.disabled}"
+                    >
+                      ${this.actionButtons.right}
+                    </button>
+                  </div>
+                `
+              : nothing}
           </div>
-          ${this.actionButtons
-            ? html`
-                <div class="cp-modal-actions">
-                  <button
-                    class="cp-modal-action-btn"
-                    @click="${this.handleLeftClick}"
-                  >
-                    ${this.actionButtons.left}
-                  </button>
-                  <button
-                    class="cp-modal-action-btn secondary"
-                    @click="${this.handleRightClick}"
-                    ?disabled="${this.disabled}"
-                  >
-                    ${this.actionButtons.right}
-                  </button>
-                </div>
-              `
-            : nothing}
-        </div>
+        </pixel-box>
       </div>
     `;
   }

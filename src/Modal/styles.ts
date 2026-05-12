@@ -22,32 +22,10 @@ export const StyledModal = css`
   .cp-modal-box {
     position: relative;
     background-color: var(--modal-bg, #ffffff);
-    border: 3px solid var(--modal-border-color, #1c2924);
-    image-rendering: pixelated;
     display: flex;
     flex-direction: column;
-    clip-path: polygon(
-      0 6px,
-      3px 6px,
-      3px 3px,
-      6px 3px,
-      6px 0,
-      calc(100% - 6px) 0,
-      calc(100% - 6px) 3px,
-      calc(100% - 3px) 3px,
-      calc(100% - 3px) 6px,
-      100% 6px,
-      100% calc(100% - 6px),
-      calc(100% - 3px) calc(100% - 6px),
-      calc(100% - 3px) calc(100% - 3px),
-      calc(100% - 6px) calc(100% - 3px),
-      calc(100% - 6px) 100%,
-      6px 100%,
-      6px calc(100% - 3px),
-      3px calc(100% - 3px),
-      3px calc(100% - 6px),
-      0 calc(100% - 6px)
-    );
+    width: 100%;
+    height: 100%;
   }
 
   .cp-modal-close {
