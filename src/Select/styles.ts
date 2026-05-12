@@ -48,30 +48,6 @@ export const StyledSelect = css`
     font-size: 16px;
     background-color: var(--select-bg, #ffffff);
     color: var(--select-font-color, #1c2924);
-    border: 3px solid var(--select-border-color, #1c2924);
-    image-rendering: pixelated;
-    clip-path: polygon(
-      0 6px,
-      3px 6px,
-      3px 3px,
-      6px 3px,
-      6px 0,
-      calc(100% - 6px) 0,
-      calc(100% - 6px) 3px,
-      calc(100% - 3px) 3px,
-      calc(100% - 3px) 6px,
-      100% 6px,
-      100% calc(100% - 6px),
-      calc(100% - 3px) calc(100% - 6px),
-      calc(100% - 3px) calc(100% - 3px),
-      calc(100% - 6px) calc(100% - 3px),
-      calc(100% - 6px) 100%,
-      6px 100%,
-      6px calc(100% - 3px),
-      3px calc(100% - 3px),
-      3px calc(100% - 6px),
-      0 calc(100% - 6px)
-    );
   }
 
   .cp-select-display.disabled {

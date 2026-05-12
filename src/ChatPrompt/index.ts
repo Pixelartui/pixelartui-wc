@@ -4,6 +4,7 @@ import {styleMap} from 'lit/directives/style-map.js';
 import {StyledChatPrompt} from './styles';
 import {ChatPromptStyle} from './types';
 
+import '../Box';
 import {theme} from '../Theme';
 
 export class PixelChatPrompt extends LitElement {
@@ -74,26 +75,33 @@ export class PixelChatPrompt extends LitElement {
 
     return html`
       <div class="cp-chat-prompt-container" style="${containerStyles}">
-        <div class="cp-chat-prompt-inner">
-          <textarea
-            class="cp-chat-prompt-textarea"
-            name="${this.inputName}"
-            .value="${this.internalValue}"
-            placeholder="${this.placeholder}"
-            ?disabled="${this.disabled}"
-            rows="1"
-            @input="${this.handleInput}"
-            @keydown="${this.handleKeyDown}"
-          ></textarea>
-          <button
-            class="cp-chat-prompt-send"
-            ?disabled="${this.disabled}"
-            @click="${this.handleSend}"
-            type="button"
-          >
-            Send
-          </button>
-        </div>
+        <pixel-box
+          fullwidth
+          boxStyle="${this.chatPromptStyle}"
+          ?disabled="${this.disabled}"
+          customColor="${this.backgroundColor}"
+        >
+          <div class="cp-chat-prompt-inner">
+            <textarea
+              class="cp-chat-prompt-textarea"
+              name="${this.inputName}"
+              .value="${this.internalValue}"
+              placeholder="${this.placeholder}"
+              ?disabled="${this.disabled}"
+              rows="1"
+              @input="${this.handleInput}"
+              @keydown="${this.handleKeyDown}"
+            ></textarea>
+            <button
+              class="cp-chat-prompt-send"
+              ?disabled="${this.disabled}"
+              @click="${this.handleSend}"
+              type="button"
+            >
+              Send
+            </button>
+          </div>
+        </pixel-box>
       </div>
     `;
   }

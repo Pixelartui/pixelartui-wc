@@ -5,6 +5,7 @@ import {styleMap} from 'lit/directives/style-map.js';
 import {StyledSelect} from './styles';
 import {SelectOption, SelectStyle, SelectType} from './types';
 
+import '../Box';
 import {theme} from '../Theme';
 import {adjust} from '../helper';
 
@@ -171,10 +172,18 @@ export class PixelSelect extends LitElement {
           ? html`<label class="cp-select-label">${this.selectLabel}</label>`
           : nothing}
         <div class="cp-select-wrapper" @click="${this.toggleDropdown}">
-          <div class="${displayClasses}" role="combobox" aria-expanded="${this.openDropdown}" aria-haspopup="listbox">
-            <span class="cp-select-display-text">${this.currentDisplay}</span>
-            ${this.renderIcon()}
-          </div>
+          <pixel-box
+            fullwidth
+            boxStyle="${this.selectStyle}"
+            ?disabled="${this.disabled}"
+            ?error="${this.error}"
+            customColor="${this.backgroundColor}"
+          >
+            <div class="${displayClasses}" role="combobox" aria-expanded="${this.openDropdown}" aria-haspopup="listbox">
+              <span class="cp-select-display-text">${this.currentDisplay}</span>
+              ${this.renderIcon()}
+            </div>
+          </pixel-box>
           <div class="${dropdownClasses}">
             <div class="cp-select-options" role="listbox">
               ${this.options.map((option) => {
